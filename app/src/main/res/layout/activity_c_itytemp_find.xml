@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".CItytempFind">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/DarkSkyBlue"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="cursive"
+            android:text="Mausam"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="220dp"
+        app:cardBackgroundColor="@color/LightRed"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.219">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/city_lottie"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/loading" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+
+                <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Temperature = "
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/city_temprature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/temp"
+                    android:text="--"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+
+                <TextView
+                    android:id="@+id/Celsius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/city_temprature"
+                    android:text="\u2103"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/City_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Delhi"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/city_Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="-----"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/LightRed"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.585">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/latitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Latitude = "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/city_latitude_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/latitude"
+                        android:text="&#45;&#45;&#45;&#45;"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/max_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Max Temp = "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/city_max_temp_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/max_temp"
+                        android:text="&#45;&#45;&#45;&#45;"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/pressure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Pressure = "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/city_presure_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/pressure"
+                        android:text="&#45;&#45;&#45;&#45;"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/sunrise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Sunrise = "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/city_sunrise_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/sunrise"
+                        android:text="&#45;&#45;&#45;&#45;"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/Wind_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Wind Speed = "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/city_wind_speed_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/Wind_speed"
+                        android:text="&#45;&#45;&#45;&#45;"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/longitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Longitude = "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/city_longitude_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/longitude"
+                        android:text="&#45;&#45;&#45;&#45;"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/min_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Min Temp = "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/city_min_temp_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/min_temp"
+                        android:text="&#45;&#45;&#45;&#45;"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Humdity = "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/city_humidity_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/humidity"
+                        android:text="&#45;&#45;&#45;&#45;"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/sunset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Sunset = "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/city_sunset_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/sunset"
+                        android:text="&#45;&#45;&#45;&#45;"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/visibility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Visibilty  = "
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/city_visiblity_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/visibility"
+                        android:text="&#45;&#45;&#45;&#45;"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/LightRed"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/city_edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:hint="Enter city name " />
+
+                <Button
+                    android:id="@+id/city_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/LightRed"
+                    android:text="Get Weather"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/update_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter Weather Type to update"
+                android:layout_margin="1dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/LightRed"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.925">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/insert_database_button"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/LightRed"
+                android:text="Insert"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/view_database_button"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/LightRed"
+                android:text="View"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Delete_database_button"
+                    android:layout_width="10dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/LightRed"
+                    android:text="Delete"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/Update_database_button"
+                    android:layout_width="10dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/LightRed"
+                    android:text="Update"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
